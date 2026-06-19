@@ -37,13 +37,7 @@ print("Saved to excel file")
 
 expense_summary = data[data['Category'] != 'Amount'].groupby("Category")["Amount"].sum()
 
-def predict_category(description):
-    prompt = f""" You are a financial assistant. Categorise this expense into one of:
-    ['Food', 'Transportation', 'Entertainment', 'Utilities', 'Shopping', 'Others'].
-    
-    Expense: "{description}"
-    Just return the category name.
-    """
+
 
 
 csv_file = "Money.csv"
