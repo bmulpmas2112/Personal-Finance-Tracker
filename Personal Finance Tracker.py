@@ -54,14 +54,7 @@ with st.form("expense_form"):
     category = st.text_input("Category")
     amount  = st.number_input("Amount", min_value=0.0, format="%.2f")
 
-    predicted_category=""
-    if description:
-        predicted_category = predict_category(description)
 
-
-    description = st.text_input("Description (auto-predicted, but you can edit)",
-    value = predicted_category
-                             )
     submitted = st.form_submit_button("Add")
 
     if submitted:
